@@ -6,3 +6,11 @@ Get the newest debootstrap (as for 08/14/2017) and install it:
 * wget http://archive.ubuntu.com/ubuntu/pool/main/d/debootstrap/debootstrap_1.0.91ubuntu1_all.deb
 * sudo dpkg --install debootstrap_1.0.91ubuntu1_all.deb && rm -rf debootstrap_1.0.91ubuntu1_all.deb
 
+After you bootstrapped fresh environemnt login into chroot as
+
+* schroot -c chroot:xenial_x86-64 -u root
+
+\* before doing that copy schroot-xenial_x86-64.conf into /etc/shcroot/chroot.d with sudo
+
+\* ./configure 	--prefix=/srv/chroot/xenial_x86-64 --exec-prefix=/srv/chroot/xenial_x86-64 \
+		--includedir=/srv/chroot/xenial_x86-64/usr/include
