@@ -25,5 +25,7 @@ packages_list=$(cat 'packages.config' | grep -v '#' | sort -u | tr '\n' ' ')
 
 fakechroot_engage_cmd='fakechroot fakeroot'
 
+# fakechroot with minbase variant is vital only when rolling out distro into home directory where user has full access
+# rights
 $fakechroot_engage_cmd debootstrap --verbose --variant=minbase --arch=amd64 --components=main,universe --include="$packages_list" xenial "$location"
 
