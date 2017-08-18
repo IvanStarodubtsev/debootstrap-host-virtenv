@@ -12,9 +12,11 @@ After you bootstrapped fresh environemnt login into chroot as
 
 \* before doing that copy schroot-xenial_x86-64.conf into /etc/shcroot/chroot.d with sudo
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ??? below might be extra step which is useless (potentially)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \* ./configure 	--prefix=/srv/chroot/xenial_x86-64 --exec-prefix=/srv/chroot/xenial_x86-64 \
 		--includedir=/srv/chroot/xenial_x86-64/usr/include
 
+!!!
+CAUTION: do not use fakeroot for chroot installations - use real chroots with root access rights!
