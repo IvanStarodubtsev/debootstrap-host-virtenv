@@ -1,3 +1,6 @@
-#!/bin/bash -evx
+#!/bin/bash -ex
 
-schroot -i -c chroot:xenial_x86-64 | grep Directory | awk '{ print $2 }'
+#schroot -i -c chroot:xenial_x86-64 | grep Directory | awk '{ print $2 }'
+
+# to start colorful prompt in chroot do this (fuck yeah!):
+schroot -c chroot:xenial_x86-64 -u root -d / -- env color_prompt=yes bash
